@@ -64,6 +64,13 @@ namespace SharpVectors.Converters
 
         #endregion
 
+        #region DependencyProperties
+
+        public static readonly DependencyProperty SourceProperty = DependencyProperty.Register("Source", typeof(Uri), typeof(SvgViewbox), new FrameworkPropertyMetadata(null, OnSourceChanged));
+
+        #endregion
+        
+        
         #region Public Properties
 
         /// <summary>
@@ -77,14 +84,27 @@ namespace SharpVectors.Converters
         /// </value>
         public Uri Source
         {
-            get
-            {
-                return _sourceUri;
-            }
+            //get
+            //{
+            //    return _sourceUri;
+            //}
+            //set
+            //{
+            //    _sourceUri = value;
+
+            //    if (_sourceUri == null)
+            //    {
+            //        this.OnUnloadDiagram();
+            //    }
+            //    else
+            //    {
+            //        this.OnSettingsChanged();
+            //    }
+            //}
+            get => (Uri)GetValue(SourceProperty);
             set
             {
                 _sourceUri = value;
-
                 if (_sourceUri == null)
                 {
                     this.OnUnloadDiagram();
@@ -93,6 +113,7 @@ namespace SharpVectors.Converters
                 {
                     this.OnSettingsChanged();
                 }
+                SetValue(SourceProperty, value);
             }
         }
 
@@ -523,6 +544,24 @@ namespace SharpVectors.Converters
                         asmName, svgPath);
 
                     return new Uri(uriString);
+                }
+            }
+        }
+
+        private static void OnSourceChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            SvgViewbox box = null;
+            box = d as SvgViewbox;
+            if (box != null)
+            {
+                box._sourceUri = (Uri)e.NewValue;
+                if (box._sourceUri == null)
+                {
+                    box.OnUnloadDiagram();
+                }
+                else
+                {
+                    box.OnSettingsChanged();
                 }
             }
         }
