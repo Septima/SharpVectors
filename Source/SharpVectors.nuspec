@@ -1,25 +1,21 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata minClientVersion="2.5">
-    <id>SharpVectors.Reloaded</id>
+    <id>Septima.SharpVectors</id>
     <version>$version$</version>
-    <title>SharpVectors</title>
-    <authors>Elinam LLC (Japan)</authors>
-    <owners>SharpVectors Team</owners>
+    <title>Septima.SharpVectors</title>
+    <authors>Elinam LLC (Japan). Septima</authors>
+    <owners>Septima</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>A library for parsing, converting and viewing SVG files in WPF and WinForms applications.</description>
-    <licenseUrl>https://github.com/ElinamLLC/SharpVectors/blob/master/License.md</licenseUrl>
-    <projectUrl>https://github.com/ElinamLLC/SharpVectors</projectUrl>
-    <iconUrl>https://github.com/ElinamLLC/SharpVectors/blob/master/Images/SharpVectors.png?raw=true</iconUrl>
-    <copyright>Copyright (c) 2010 - 2018 Elinam LLC</copyright>
+    <description>A library for parsing, converting and viewing SVG files in WPF and WinForms applications. Forked from SharpVectors.Reloaded.
+    </description>
+    <licenseUrl>https://github.com/Septima/SharpVectors/blob/master/License.md</licenseUrl>
+    <projectUrl>https://github.com/Septima/SharpVectors</projectUrl>
+    <iconUrl>https://github.com/Septima/SharpVectors/blob/master/Images/SharpVectors.png?raw=true</iconUrl>
+    <copyright>Copyright (c) 2010 - 2018 Elinam LLC. Copyright (c) Septima 2018.</copyright>
     <releaseNotes>
-		* Moved from the .NET Client Profile to the full .NET Framework.
-		* Cleanup the .NET framework dependencies.
-		* Changed the converter assembly name; SharpVectors.Converters.dll to SharpVectors.Converters.Wpf.dll
-		* Changed the converter assembly name; SharpVectors.Runtime.dll to SharpVectors.Runtime.Wpf.dll
-		* Resolved various reported parsing and number handling issues. 
-		* Resolved various reported rendering issues, especially opacity and gradient fills. 
-		* Added marker support.
+		* Forked from https://github.com/ElinamLLC/SharpVectors
+    * Added support for Data URLs (data encoded directly in the URL) for SvgViewBox
 	</releaseNotes>
     <tags>svg .net wpf svg2xaml svg2wpf xaml</tags>
   </metadata>
