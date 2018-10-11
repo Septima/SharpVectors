@@ -59,5 +59,5 @@ using System.Windows.Markup;
 [assembly: AssemblyFileVersion("1.1.0.0")]
 [assembly: AssemblyInformationalVersion("1.1.0.0")]
 
-[assembly: XmlnsPrefix("http://sharpvectors.codeplex.com/runtime/", "svg")]
-[assembly: XmlnsDefinition("http://sharpvectors.codeplex.com/runtime/", "SharpVectors.Runtime")]
+[assembly: XmlnsPrefix("http://septima.dk/sharpvectors/runtime/", "svg")]
+[assembly: XmlnsDefinition("http://septima.dk/sharpvectors/runtime/", "SharpVectors.Runtime")]
