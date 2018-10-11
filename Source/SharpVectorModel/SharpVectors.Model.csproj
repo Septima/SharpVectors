@@ -12,7 +12,8 @@
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
     <AssemblyName>SharpVectors.Model</AssemblyName>
-    <AssemblyOriginatorKeyFile>SharpVectors.Model.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
     <OutputType>Library</OutputType>
     <RootNamespace>SharpVectors.Dom</RootNamespace>
     <SignAssembly>true</SignAssembly>
@@ -448,7 +449,6 @@
     <None Include="Diagrams\SvgPathSegs.cd" />
     <None Include="Diagrams\SvgTextContentElements.cd" />
     <None Include="Diagrams\SvgTransformableElements.cd" />
-    <None Include="SharpVectors.Model.snk" />
     <EmbeddedResource Include="Resources\www.w3.org\TR.xhtml1.DTD\xhtml1-strict.dtd" />
     <EmbeddedResource Include="Resources\www.w3.org\TR.xhtml1.DTD\xhtml-special.ent" />
     <EmbeddedResource Include="Resources\www.w3.org\TR.xhtml1.DTD\xhtml-lat1.ent" />

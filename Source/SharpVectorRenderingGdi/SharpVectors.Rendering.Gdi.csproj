@@ -12,7 +12,8 @@
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
     <AssemblyName>SharpVectors.Rendering.Gdi</AssemblyName>
-    <AssemblyOriginatorKeyFile>SharpVectors.Rendering.Gdi.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
     <OutputType>Library</OutputType>
     <RootNamespace>SharpVectors.Renderers</RootNamespace>
     <SignAssembly>true</SignAssembly>
@@ -182,7 +183,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Diagrams\GdiGraphics.cd" />
-    <None Include="SharpVectors.Rendering.Gdi.snk" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\SvgPictureBox.resx">

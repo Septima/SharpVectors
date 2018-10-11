@@ -12,7 +12,8 @@
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
     <AssemblyName>SharpVectors.Core</AssemblyName>
-    <AssemblyOriginatorKeyFile>SharpVectors.Core.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
     <OutputType>Library</OutputType>
     <RootNamespace>SharpVectors.Dom</RootNamespace>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -788,9 +789,6 @@
     <Compile Include="Views\IDocumentView.cs">
       <SubType>Code</SubType>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="SharpVectors.Core.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -12,7 +12,8 @@
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
     <AssemblyName>SharpVectors.Dom</AssemblyName>
-    <AssemblyOriginatorKeyFile>SharpVectors.Dom.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
     <OutputType>Library</OutputType>
     <RootNamespace>SharpVectors.Dom</RootNamespace>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -193,9 +194,6 @@
     <Compile Include="Whitespace.cs">
       <SubType>Code</SubType>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="SharpVectors.Dom.snk" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SharpVectorCore\SharpVectors.Core.csproj">
