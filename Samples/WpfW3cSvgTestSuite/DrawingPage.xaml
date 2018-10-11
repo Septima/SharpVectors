@@ -1,7 +1,7 @@
 ﻿<Page x:Class="WpfW3cSvgTestSuite.DrawingPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:svg="http://sharpvectors.codeplex.com/runtime/"
+    xmlns:svg="http://septima.dk/sharpvectors/runtime/"
     xmlns:local="clr-namespace:WpfW3cSvgTestSuite"
     Title="DrawingPage">
     <Grid Name="rightGrid"> 
