@@ -3,9 +3,9 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:svg="http://septima.dk/sharpvectors/runtime/"
       xmlns:local="clr-namespace:WpfTestSvgSample"
       xmlns:wpfShapeRendering="clr-namespace:SharpVectors.Renderers.Wpf.Shape;assembly=SharpVectors.Rendering.Wpf"
+      xmlns:runtime="http://sharpvectors.codeplex.com/runtime/"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ShapeDrawingPage" Background="White"
@@ -86,7 +86,7 @@
             VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible" AllowDrop="True">
 
             <!-- This is the control that handles zooming and panning. -->
-            <svg:ZoomPanControl x:Name="zoomPanControl" Background="LightGray"
+            <runtime:ZoomPanControl x:Name="zoomPanControl" Background="LightGray"
                 MouseDown="OnZoomPanMouseDown" MouseUp="OnZoomPanMouseUp"
                 MouseMove="OnZoomPanMouseMove" MouseWheel="OnZoomPanMouseWheel">
 
@@ -101,7 +101,7 @@
                     </Canvas>
                 </Canvas>
 
-            </svg:ZoomPanControl>
+            </runtime:ZoomPanControl>
 
         </ScrollViewer>
     </DockPanel>
