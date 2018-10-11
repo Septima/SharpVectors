@@ -440,7 +440,7 @@ namespace SharpVectors.Converters
                     case "data":
                         if(!svgSource.AbsoluteUri.StartsWith("data:image/svg+xml;base64,", StringComparison.InvariantCultureIgnoreCase))
                             break;
-                        var data = svgSource.AbsoluteUri.Substring(26);
+                        var data = svgSource.OriginalString.Substring(26).Replace('-', '+').Replace('_', '/').Replace(" ", "");
                         var bytes = Convert.FromBase64String(data);
                         var stream = new MemoryStream(bytes);
                         using (var reader = new FileSvgReader(settings))
