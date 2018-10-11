@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Markup;
 using System.Windows.Controls;
+using System.Windows.Markup.Localizer;
 using System.Windows.Resources;
 
 using SharpVectors.Runtime;
@@ -414,6 +415,18 @@ namespace SharpVectors.Converters
                                 }
                             }
                         }
+                        break;
+                    case "data":
+                        if(!svgSource.AbsoluteUri.StartsWith("data:image/svg+xml;base64,", StringComparison.InvariantCultureIgnoreCase))
+                            break;
+                        var data = svgSource.AbsoluteUri.Substring(26);
+                        var bytes = Convert.FromBase64String(data);
+                        var stream = new MemoryStream(bytes);
+                        using (var reader = new FileSvgReader(settings))
+                        {
+                            drawing = reader.Read(stream);
+                        }
+
                         break;
                 }
 
