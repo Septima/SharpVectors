@@ -11,6 +11,9 @@
             <TabItem Name="tabSvg" Header="Svg Input">
                 <Frame Name="frameSvg" Source="Page1.xaml"/>
             </TabItem>
+            <TabItem Name="tabSvg2" Header="Svg Input Binding">
+                <Frame Name="frameSvg2" Source="Page2.xaml"/>
+            </TabItem>
         </TabControl>
     </DockPanel>
 </Window>
