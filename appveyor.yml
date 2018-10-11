@@ -36,10 +36,12 @@ configuration:
   - Release
 
 build:
-  project: Main\Source\SharpVectorsReloaded.sln
+  project: Source\SharpVectors.sln
+  publish_nuget: true
+  publish_nuget_symbols: true
 
 after_build:
-  - ps: nuget pack "Main\Source\SharpVectorsReloaded.nuspec" -Properties "version=$env:GitVersion_NuGetVersionV2"
+  - ps: nuget pack "Source\SharpVectors.nuspec" -Properties "version=$env:GitVersion_NuGetVersionV2"
 
 #---------------------------------#
 #      packaging artifacts        #
@@ -47,15 +49,3 @@ after_build:
 
 artifacts:
   - path: '**\*.nupkg'
-
-#---------------------------------#
-#     deployment configuration    #
-#---------------------------------#
-deploy:
-  - provider: NuGet
-    api_key:
-      secure: <your secret here>
-    skip_symbols: true
-    artifact: /.*\.nupkg/
-    on:
-      APPVEYOR_REPO_TAG: true
